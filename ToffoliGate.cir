@@ -1,0 +1,44 @@
+* c:\users\arpit\coding\esim_projects\toffoligate\toffoligate.cir
+
+.lib "models/sky130.lib.spice" tt
+xm1 net-_m1-pad1_ vin1_a_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm4 net-_m1-pad1_ vin2_b_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm2 net-_m1-pad1_ vin1_a_ net-_m2-pad3_ gnd sky130_fd_pr__nfet_01v8
+xm3 net-_m2-pad3_ vin2_b_ gnd gnd sky130_fd_pr__nfet_01v8
+xm6 aandb net-_m1-pad1_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm5 aandb net-_m1-pad1_ gnd gnd sky130_fd_pr__nfet_01v8
+xm8 net-_m11-pad2_ aandb net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm7 net-_m11-pad2_ aandb gnd gnd sky130_fd_pr__nfet_01v8
+xm10 net-_m10-pad1_ vin3_c_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm9 net-_m10-pad1_ vin3_c_ gnd gnd sky130_fd_pr__nfet_01v8
+xm13 net-_m13-pad1_ net-_m11-pad2_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm15 net-_m13-pad1_ net-_m10-pad1_ net-_m1-pad3_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm14 vout3_abxorc_ aandb net-_m13-pad1_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm16 vout3_abxorc_ vin3_c_ net-_m13-pad1_ net-_m1-pad3_ sky130_fd_pr__pfet_01v8
+xm11 vout3_abxorc_ net-_m11-pad2_ net-_m11-pad3_ gnd sky130_fd_pr__nfet_01v8
+xm12 net-_m11-pad3_ net-_m10-pad1_ gnd gnd sky130_fd_pr__nfet_01v8
+xm17 vout3_abxorc_ aandb net-_m17-pad3_ gnd sky130_fd_pr__nfet_01v8
+xm18 net-_m17-pad3_ vin3_c_ gnd gnd sky130_fd_pr__nfet_01v8
+v4 net-_m1-pad3_ gnd  dc 1.8
+v1  vin1_a_ gnd pulse(0 1.8 0 0 0 25 50)
+v2  vin2_b_ gnd pulse(0 1.8 0 0 0 7.5 15)
+v3  vin3_c_ gnd pulse(0 1.8 0 0 0 15 30)
+* u1  vin1_a_ plot_v1
+* u2  vin2_b_ plot_v1
+* u3  vin3_c_ plot_v1
+* u4  vout3_abxorc_ plot_v1
+* u5  aandb plot_v1
+.tran 1e-00 90e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vin1_a_)
+plot v(vin2_b_)
+plot v(vin3_c_)
+plot v(aandb)
+plot v(vout3_abxorc_)
+.endc
+.end

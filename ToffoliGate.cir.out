@@ -1,0 +1,45 @@
+* c:\users\arpit\coding\esim_projects\toffoligate\toffoligate.cir
+
+.include NMOS-180nm.lib
+.include PMOS-180nm.lib
+m1 net-_m1-pad1_ vin1_a_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m4 net-_m1-pad1_ vin2_b_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m2 net-_m1-pad1_ vin1_a_ net-_m2-pad3_ gnd CMOSN W=100u L=100u M=1
+m3 net-_m2-pad3_ vin2_b_ gnd gnd CMOSN W=100u L=100u M=1
+m6 aandb net-_m1-pad1_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m5 aandb net-_m1-pad1_ gnd gnd CMOSN W=100u L=100u M=1
+m8 net-_m11-pad2_ aandb net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m7 net-_m11-pad2_ aandb gnd gnd CMOSN W=100u L=100u M=1
+m10 net-_m10-pad1_ vin3_c_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m9 net-_m10-pad1_ vin3_c_ gnd gnd CMOSN W=100u L=100u M=1
+m13 net-_m13-pad1_ net-_m11-pad2_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m15 net-_m13-pad1_ net-_m10-pad1_ net-_m1-pad3_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m14 vout3_abxorc_ aandb net-_m13-pad1_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m16 vout3_abxorc_ vin3_c_ net-_m13-pad1_ net-_m1-pad3_ CMOSP W=100u L=100u M=1
+m11 vout3_abxorc_ net-_m11-pad2_ net-_m11-pad3_ gnd CMOSN W=100u L=100u M=1
+m12 net-_m11-pad3_ net-_m10-pad1_ gnd gnd CMOSN W=100u L=100u M=1
+m17 vout3_abxorc_ aandb net-_m17-pad3_ gnd CMOSN W=100u L=100u M=1
+m18 net-_m17-pad3_ vin3_c_ gnd gnd CMOSN W=100u L=100u M=1
+v4 net-_m1-pad3_ gnd  dc 1.8
+v1  vin1_a_ gnd pulse(0 1.8 0 0 0 25 50)
+v2  vin2_b_ gnd pulse(0 1.8 0 0 0 7.5 15)
+v3  vin3_c_ gnd pulse(0 1.8 0 0 0 15 30)
+* u1  vin1_a_ plot_v1
+* u2  vin2_b_ plot_v1
+* u3  vin3_c_ plot_v1
+* u4  vout3_abxorc_ plot_v1
+* u5  aandb plot_v1
+.tran 1e-00 90e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vin1_a_)
+plot v(vin2_b_)
+plot v(vin3_c_)
+plot v(vout3_abxorc_)
+plot v(aandb)
+.endc
+.end
