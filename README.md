@@ -9,12 +9,19 @@ This circuit simulation project presents the design and simulation of Toffoli Ga
 ▫️ References  
 ## Abstract  
 Toffoli gate is a 3 input, 3 output reversible logic gate. It is a universal logic gate i.e. it can be used to construct any classical reversible logic circuit. It is also called as CCNOT gate where CCNOT stands for Controlled Controlled NOT. For Toffoli gate if the first two input bits are high, then the third output bit becomes zero due to XOR operation, otherwise all bits remain the same. 
+
+![bgdm](https://user-images.githubusercontent.com/68592620/166119595-de2a2e2f-336d-4842-a81e-d7c82489013b.jpg)
+
 A circuit is called reversible only when its inputs can be determined from its outputs and the input-output possess one to one mapping. Fredkin gate, Toffoli gate, interaction gate, and switch gate are other such examples of reversible logic gates. In a reversible logic gate, the number of outputs is always equal to the number of inputs. Reversible logic gates are memoryless logic units and the function realised by a reversible circuit is a mathematically Injective logic function. A function is called Injective function when its each input element is mapped to only one & unique output element. That's how it has one to one mapping.
 
 The major advantage such kind of reversible circuits provide includes better input traceability, low computation time i.e. high speed computations and reduced information loss.Also, Reversible circuits make reversible computations possible in which the loss of information is drastically reduced which, according to the Landauer’s Research leads to reduced loss of energy in the circuit. Major applications of reversable computing includes low-power VLSI design, quantum computation, DNA computing and nanotechnology etc.
 ## Tools used
 
+![Screenshot 2022-05-01 003037](https://user-images.githubusercontent.com/68592620/166119582-37f72063-deed-44e6-90d3-9b32ec60c0ca.png)
+
 ## Circuit Schematic
+
+![ckt](https://user-images.githubusercontent.com/68592620/166119626-006c40a3-50cd-4e6f-bf9e-af6ab3b37b7f.jpg)
 
 ## Results & Waveforms
 
