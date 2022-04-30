@@ -19,6 +19,7 @@ The major advantage such kind of reversible circuits provide includes better inp
 
 ![Screenshot 2022-05-01 003037](https://user-images.githubusercontent.com/68592620/166119582-37f72063-deed-44e6-90d3-9b32ec60c0ca.png)
 
+eSim (previously known as Oscad / FreeEDA) is a free/libre and open source EDA tool for circuit design, simulation, analysis and PCB design. It is an integrated tool built using free/libre and open source software such as KiCad, Ngspice, Verilator, Makerchip, and GHDL. eSim is released under GPL.eSim offers similar capabilities and ease of use as any equivalent proprietary software for schematic creation, simulation and PCB design, without having to pay a huge amount of money to procure licenses. Hence it can be an affordable alternative to educational institutions and SMEs. It can serve as an alternative to commercially available/licensed software tools like OrCAD, Xpedition and HSPICE.
 ## Circuit Schematic
 
 ![ckt](https://user-images.githubusercontent.com/68592620/166119626-006c40a3-50cd-4e6f-bf9e-af6ab3b37b7f.jpg)
