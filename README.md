@@ -1,4 +1,4 @@
-# Design-of-Toffoli-Quantum-Gate
+# Circuit Design of Toffoli Quantum Gate using eSim & Sky130 PDK
 This circuit simulation project presents the design and simulation of Toffoli Gate using open-source tool eSim and Sky130 PDK library. 
 ## Table of contents
 ▫️ Abstract  
