@@ -24,6 +24,12 @@ The major advantage such kind of reversible circuits provide includes better inp
 ![ckt](https://user-images.githubusercontent.com/68592620/166119626-006c40a3-50cd-4e6f-bf9e-af6ab3b37b7f.jpg)
 
 ## Results & Waveforms
+![Vin1 bmp](https://user-images.githubusercontent.com/68592620/166119750-2f84a83f-a682-4f80-a189-01591db23df5.jpg)
+![Vin2 bmp](https://user-images.githubusercontent.com/68592620/166119751-315c33f5-59fb-4200-bbc7-d1c43f350320.jpg)
+![Vin3 bmp](https://user-images.githubusercontent.com/68592620/166119752-8cb5a813-8013-4c5a-9b41-d4d5148d0fa2.jpg)
+![Abstract](https://user-images.githubusercontent.com/68592620/166119786-a8c597b6-52a2-448a-9d7d-677272c51a25.jpg)
+![Vout3 bmp](https://user-images.githubusercontent.com/68592620/166119791-d2219af7-5fdb-44e7-bacd-902a6723e889.jpg)
+
 
 ## Spice Netlist
 ```
